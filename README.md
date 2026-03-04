@@ -18,7 +18,7 @@ An AI-powered developer chatbot that helps with coding, debugging, and learning 
 
 🚀 **Try DevAI Online**
 
-👉 https://devai-ai-develper-assistant.netlify.app
+👉 https://devai-gamma.vercel.app
 
 ---
 
