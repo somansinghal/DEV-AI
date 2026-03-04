@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DevAI – AI Developer Assistant</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Markdown -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<!-- Code Highlight -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="app">
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+<div class="logo">
+<img src="assets/logo.svg">
+<h2>DevAI</h2>
+</div>
+
+<button onclick="newChat()" class="new-chat">
++ New Chat
+</button>
+
+<div id="history"></div>
+
+</div>
+
+
+<!-- Chat Area -->
+
+<div class="chat-area">
+
+<div class="chat-container">
+
+<!-- Messages -->
+
+<div id="chat"></div>
+
+
+<!-- Suggestions -->
+
+<div class="suggestions">
+
+<button onclick="suggest('Explain JavaScript closures')">
+Explain closures
+</button>
+
+<button onclick="suggest('Write Python web scraper')">
+Python scraper
+</button>
+
+<button onclick="suggest('Debug React error')">
+Debug React
+</button>
+
+<button onclick="suggest('Explain Docker containers')">
+Docker help
+</button>
+
+</div>
+
+
+<!-- Input -->
+
+<div class="input-area">
+
+<input
+id="prompt"
+placeholder="Ask DevAI anything about programming..."
+autocomplete="off"
+/>
+
+<button onclick="sendMessage()" class="send-btn">
+Send
+</button>
+
+<button onclick="startVoice()" class="voice-btn">
+🎤
+</button>
+
+<input type="file" id="fileInput" hidden />
+
+<button
+class="upload-btn"
+onclick="document.getElementById('fileInput').click()"
+>
+📂
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

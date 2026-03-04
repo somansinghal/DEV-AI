@@ -1,0 +1,278 @@
+body{
+    margin:0;
+    font-family:system-ui;
+    color:white;
+    height:100vh;
+    overflow:hidden;
+    background:#020617;
+    }
+    
+    /* Animated background */
+    
+    .background{
+    position:fixed;
+    width:200%;
+    height:200%;
+    background:
+    radial-gradient(circle at 20% 30%, #38bdf8, transparent),
+    radial-gradient(circle at 80% 60%, #22c55e, transparent),
+    radial-gradient(circle at 40% 80%, #6366f1, transparent);
+    animation:move 20s linear infinite;
+    z-index:-1;
+    }
+    
+    @keyframes move{
+    0%{transform:translate(0,0)}
+    50%{transform:translate(-10%,-10%)}
+    100%{transform:translate(0,0)}
+    }
+    
+    /* Layout */
+    
+    .app{
+    display:flex;
+    height:100vh;
+    }
+    
+    /* Sidebar */
+    
+    .sidebar{
+    width:260px;
+    background:#020617;
+    border-right:1px solid #1e293b;
+    padding:20px;
+    }
+    
+    .logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:20px;
+    }
+    
+    .logo img{
+    width:40px;
+    }
+    
+    .new-chat{
+    width:100%;
+    padding:10px;
+    background:#38bdf8;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    }
+    
+    /* Chat area */
+    
+    .chat-area{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start; /* FIX */
+    padding-top:40px;
+    background:rgba(15,23,42,0.6);
+    backdrop-filter:blur(20px);
+    }
+    
+    /* Chat container */
+    
+    .chat-container{
+    width:100%;
+    max-width:900px;
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    }
+    
+    /* Chat messages */
+    
+    #chat{
+    flex:1;
+    overflow-y:auto;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    scroll-behavior:smooth;
+    }
+    
+    /* Messages */
+    
+    .message{
+    display:flex;
+    gap:10px;
+    max-width:700px;
+    animation:fadeIn .3s ease;
+    }
+    
+    .message img{
+    width:32px;
+    height:32px;
+    border-radius:50%;
+    }
+    
+    .message div{
+    padding:15px;
+    border-radius:12px;
+    line-height:1.6;
+    }
+    
+    
+        
+    .user{
+    align-self:flex-end;
+    flex-direction:row-reverse;
+    }
+        
+    .bot{
+    align-self:flex-start;
+    }
+    
+    .bot div{
+    background:#1e293b;
+    }
+    
+    .user{
+    align-self:flex-end;
+    flex-direction:row-reverse;
+    }
+    
+    .user div{
+    background:#38bdf8;
+    color:black;
+    }
+    
+    /* Suggestions */
+    
+    .suggestions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    padding:10px 20px;
+    }
+    
+    .suggestions button{
+    background:#1e293b;
+    border:none;
+    padding:8px 12px;
+    border-radius:8px;
+    color:white;
+    cursor:pointer;
+    }
+    
+    /* Input area */
+    
+    .input-area{
+    display:flex;
+    gap:10px;
+    padding:15px 20px;
+    margin-top:auto;
+    background:#020617;
+    border-radius:10px;
+    }
+    
+    .input-area input{
+    flex:1;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#1e293b;
+    color:white;
+    }
+    
+    .input-area button{
+    padding:14px 18px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    }
+    
+    .send-btn{
+    background:#22c55e;
+    }
+    
+    .voice-btn{
+    background:#f59e0b;
+    }
+    
+    .upload-btn{
+    background:#6366f1;
+    }
+    
+    /* Code blocks */
+    
+    pre{
+    background:#020617;
+    padding:15px;
+    border-radius:10px;
+    overflow:auto;
+    position:relative;
+    }
+    
+    /* Copy button */
+    
+    .copy-btn{
+    position:absolute;
+    top:6px;
+    right:6px;
+    background:#22c55e;
+    border:none;
+    padding:5px 8px;
+    font-size:12px;
+    border-radius:6px;
+    cursor:pointer;
+    }
+    
+    /* Scrollbar */
+    
+    #chat::-webkit-scrollbar{
+    width:6px;
+    }
+    
+    #chat::-webkit-scrollbar-thumb{
+    background:#38bdf8;
+    border-radius:10px;
+    }
+    
+    /* Animation */
+    
+    @keyframes fadeIn{
+    from{
+    opacity:0;
+    transform:translateY(10px);
+    }
+    to{
+    opacity:1;
+    transform:translateY(0);
+    }
+    }
+
+    .message{
+        animation:fadeIn .3s ease;
+        }
+        
+        @keyframes fadeIn{
+        from{
+        opacity:0;
+        transform:translateY(10px);
+        }
+        to{
+        opacity:1;
+        transform:translateY(0);
+        }
+        }
+
+        .avatar{
+            width:32px;
+            height:32px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:18px;
+            background:#1e293b;
+            border-radius:50%;
+            flex-shrink:0;
+            }    
+
+    
